@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DATE=$( date '+%d-%m-%Y' )
+
+echo "#!/bin/bash" >> $1
+echo "#" >> $1
+echo "# Created on $DATE" >> $1
+echo "#" >> $1
+echo "# Made by PKNCODER" >> $1
+echo "#" >> $1
+
+chmod +x $1
+
+nano $1
