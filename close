@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Created on 18-02-2024
+#
+
+for i in $@;
+do
+        if [[ $i == "fox" ]]; then
+                pkill "firefox"
+
+        elif [[ $i == "disc" || $i == "discord" ]]; then
+                pkill "Discord"
+
+        else
+                pkill $i
+
+        fi
+done
