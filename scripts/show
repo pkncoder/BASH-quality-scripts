@@ -16,6 +16,9 @@ do
         elif [[ $i == "git" || $i == "github" ]]; then
                 open -a "firefox" --url "https://github.com/pkncoder"
 
+        elif [[ $i == "site" ]]; then
+                open -a "firefox" --url "https://pkncoder.github.io"
+
         elif [[ $i == "disc" ]]; then
                 open -a "discord"
 
