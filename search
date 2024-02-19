@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Created on 19-02-2024
+#
+# Made by PKNCODER
+#
+
+QUERRY=""
+CURRENT_COUNT=0
+
+for i in $@;
+do
+        if [[ CURRENT_COUNT -lt $(( $#-1 )) ]]; then
+                QUERRY+="$i+"
+                ((CURRENT_COUNT+=1))
+
+        else
+                QUERRY+="$i"
+
+        fi
+done
+
+open -a "firefox" --url "https://www.google.com/search?client=firefox-b-1-d&q=$QUERRY"
