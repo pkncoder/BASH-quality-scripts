@@ -11,6 +11,7 @@ Hello, my name is Pkncoder. I have some personal scripts that I use to make thin
   - The current ones:
     - vsc / vscode: Visual Studio Code
     - fox: firefox
+    - site: best website ever
     - disc: discord
   - This impliments open -a to open the apps (*and uses open -a "firefox" --url* for spesific websites)
 
