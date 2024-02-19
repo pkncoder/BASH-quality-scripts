@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Created on 17-02-2024
+#
+# Made by PKNCODER
+#
+
+for i in $@;
+do
+        if [[ $i == "vsc" || $i == "vscode" ]]; then
+                open -a "Visual Studio Code"
+
+        elif [[ $i == "fox" ]]; then
+                open -a "firefox"
+
+        elif [[ $i == "git" || $i == "github" ]]; then
+                open -a "firefox" --url "https://github.com/pkncoder"
+
+        elif [[ $i == "disc" ]]; then
+                open -a "discord"
+
+        else
+                open -a $i
+
+        fi
+done
