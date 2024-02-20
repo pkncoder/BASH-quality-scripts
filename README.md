@@ -34,6 +34,13 @@ Hello, my name is Pkncoder. I have some personal scripts that I use to make thin
   - This impliments the pkill command
   - Note there is no VSCode close shortcut, as it panicked during testing when I pkilled it (and for saving reasons)
 
- - search:
+- search:
   - This will search for whatever you put in front of it
   - Currently just spaces work, since I don't know or want to code another searching formatter (I did it in python and javascript, not fun)
+    
+- chuck:
+  - Ever need a Chuck Norris joke in your life, one chuck away from many chuckles after
+    
+- chuck-jq:
+  - This is just chuck, but for people who have jq installed
+  - It is much more efficient
