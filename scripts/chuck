@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# Created on 19-02-2024
+#
+# Made by PKNCODER
+#
+
+IFS=","
+
+
+DATA=$( curl -s "https://api.chucknorris.io/jokes/random" )
+
+
+
+DATA_ARRAY=()
+
+for i in $DATA; do DATA_ARRAY+=($i); done
+
+
+
+VALUE=""
+
+ARRAY_LEN=${#DATA_ARRAY[@]}
+((ARRAY_LEN--))
+
+
+for i in ${DATA_ARRAY[@]:6:$ARRAY_LEN};
+do
+        VALUE+=$i;
+done
+
+
+LAST_CHAR_NUM=${#VALUE}
+((LAST_CHAR_NUM-=9))
+
+echo ${VALUE:8:LAST_CHAR_NUM}
