@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Created on 19-02-2024
+#
+# Made by PKNCODER
+#
+
+echo $( curl -s "https://api.chucknorris.io/jokes/random" ) | jq '.value'
