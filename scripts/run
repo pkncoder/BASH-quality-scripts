@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+# Created on 17-03-2024
+#
+# Made by PKNCODER
+#
+
+if [[ $1 == "--set" || $1 == "-s" ]]; then
+
+        if [[ $2 == "--help" ]]; then
+                echo "Command [RUN] -s [COMMAND TO BE RAN]"
+                echo -e "\tSets a command to be ran when run is executed"
+
+        else
+                echo $2 > /usr/local/bin/runData.txt
+
+        fi
+
+elif [[ $1 == "--make" || $1 == "-m" ]]; then
+
+        if [[ $2 == "--help" ]]; then
+
+                echo -e "Command [RUN] -m [MAKE COMMAND NAME]"
+                echo -e "\tAdds a make command givin by the user into a Makefile in your current directory."
+                echo -e "\tWill open a new nano / text input in your terminal."
+                echo -e "\tThere, add the commands that your new make command will do."
+
+        else
+
+                nano /usr/local/bin/9djaoiw32nfj.txt
+
+                echo "" >> ./Makefile
+                echo >> ./Makefile
+                echo "$2:" >> ./Makefile
+
+                while IFS= read -r line; do
+                        echo -e "\t$line" >> ./Makefile
+                done < /usr/local/bin/9djaoiw32nfj.txt
+
+                rm /usr/local/bin/9djaoiw32nfj.txt
+        fi
+
+elif [[ $1 == "--help" ]]; then
+        echo "Command [RUN]"
+        echo "Generates make commands in Makefiles, or runs a spesific command."
+        echo "Options:"
+        echo -e "\t--set, -s\tSets the command to be ran when run is executed."
+        echo -e "\t--make, -m\tAdds to a makefile in the current directory."
+        echo -e "\t--help\t\tShows this."
+
+else
+        $(cat /usr/local/bin/runData.txt)
+
+fi
